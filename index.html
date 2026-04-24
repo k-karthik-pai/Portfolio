@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K Karthik Pai — CSE @ RVCE</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;transition:opacity 0.6s ease;}
+    #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-logo{font-family:'DM Serif Display',serif;font-size:3rem;letter-spacing:-0.04em;color:#0a0a0a;opacity:0;transform:translateY(10px);animation:loaderIn 0.5s 0.2s forwards}
+    .loader-bar{width:120px;height:2px;background:#e0e0e0;border-radius:2px;overflow:hidden}
+    .loader-bar-fill{height:100%;width:0;background:#1a73e8;border-radius:2px;animation:loaderFill 1.2s 0.3s ease forwards}
+    @keyframes loaderIn{to{opacity:1;transform:translateY(0)}}
+    @keyframes loaderFill{to{width:100%}}
+    .about-photo{width:260px;height:320px;object-fit:cover;object-position:center top;border-radius:16px;display:block;position:relative;z-index:1;}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">KKP<span style="color:#1a73e8">.</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="progress-bar"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KKP<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Computer Science · RVCE · Bangalore</p>
+      <h1 class="hero-title reveal">
+        Hi, I'm <span class="name-highlight">Karthik Pai</span><br />
+        I build <span id="word-swap"><span class="word active">software.</span><span class="word">solutions.</span><span class="word">cool things.</span></span>
+      </h1>
+      <p class="hero-sub reveal">2nd semester CSE student at RVCE — passionate about AI, algorithms, and building software that solves real-world problems.</p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">See My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-title">A curious mind<br /><em>always building.</em></h2>
+          <div class="about-img-wrap">
+            <img src="photo.jpeg" alt="K Karthik Pai" class="about-photo" />
+            <div class="about-img-accent"></div>
+          </div>
+        </div>
+        <div class="about-right reveal">
+          <p class="about-text">
+            I'm a 2nd semester Computer Science student at <strong>RV College of Engineering, Bangalore</strong> — one of India's top engineering institutions. I'm passionate about AI-driven solutions, swarm intelligence, and building projects that have a measurable real-world impact.
+          </p>
+          <p class="about-text">
+            From optimizing Bangalore's BMTC bus routes with AI algorithms to building crime analytics dashboards, I love tackling problems that matter. I'm always learning, always building.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">2nd</span>
+              <span class="stat-label">Semester</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">RVCE</span>
+              <span class="stat-label">College</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+          </div>
+          <a href="resume.pdf" class="btn btn-outline" download="KKarthikPai_Resume.pdf">Download Resume ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal">02 — Skills</div>
+      <h2 class="section-title reveal">Technologies I<br /><em>work with.</em></h2>
+      <div class="skills-grid reveal">
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">Java</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Libraries & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">Geopy</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Dev Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Concepts</h3>
+          <div class="skill-tags">
+            <span class="tag">Swarm Intelligence</span>
+            <span class="tag">Data Structures</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Data Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal">03 — Projects</div>
+      <h2 class="section-title reveal">Things I've<br /><em>built.</em></h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-index="1">
+          <div class="project-num">01</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Python</span>
+              <span class="ptag">AI</span>
+              <span class="ptag">Swarm Intelligence</span>
+            </div>
+            <h3 class="project-title">AlgoTransit</h3>
+            <p class="project-desc">An AI-driven system that optimizes Bangalore's BMTC bus driving cycles using a hybrid of Ant Colony (MMAS) and Bee Colony (ABC) algorithms — reducing fuel consumption and CO₂ emissions in real urban routes.</p>
+            <div class="project-links">
+              <a href="https://github.com/k-karthik-pai/AlgoTransit" target="_blank" class="plink">GitHub →</a>
+              <a href="https://k-karthik-pai.github.io/AlgoTransit/" target="_blank" class="plink plink-live">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-index="2">
+          <div class="project-num">02</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">HTML</span>
+              <span class="ptag">CSS</span>
+              <span class="ptag">JS</span>
+              <span class="ptag">Data Analytics</span>
+            </div>
+            <h3 class="project-title">Smart Crime Analytics Dashboard</h3>
+            <p class="project-desc">An interactive web dashboard for visualizing and analyzing crime data patterns. Built to help identify trends and hotspots using data-driven insights and dynamic charts.</p>
+            <div class="project-links">
+              <a href="https://github.com/k-karthik-pai/Smart-Crime-Analytics-Dashboard" target="_blank" class="plink">GitHub →</a>
+              <a href="https://k-karthik-pai.github.io/Smart-Crime-Analytics-Dashboard/" target="_blank" class="plink plink-live">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-index="3">
+          <div class="project-num">03</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Python</span>
+              <span class="ptag">Data Processing</span>
+              <span class="ptag">GPS</span>
+            </div>
+            <h3 class="project-title">EL Phase 2 — Data Pipeline</h3>
+            <p class="project-desc">A data processing pipeline that converts raw GPS coordinates (Lat/Long) into velocity profiles using geodesic distance calculations — powering the AlgoTransit optimization engine.</p>
+            <div class="project-links">
+              <a href="https://github.com/k-karthik-pai/el-phase-2-data-and-dataprocesing" target="_blank" class="plink">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-index="4">
+          <div class="project-num">04</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Python</span>
+              <span class="ptag">OOP</span>
+              <span class="ptag">CLI</span>
+            </div>
+            <h3 class="project-title">Hospital Management System</h3>
+            <p class="project-desc">A command-line hospital management system built with Python. Handles patient records, doctor assignments, appointments, and billing — demonstrating core OOP and data management concepts.</p>
+            <div class="project-links">
+              <a href="https://github.com/k-karthik-pai/Hospital-management-system" target="_blank" class="plink">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-index="5">
+          <div class="project-num">05</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">HTML</span>
+              <span class="ptag">CSS</span>
+              <span class="ptag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Personal Portfolio</h3>
+            <p class="project-desc">This very website — designed and built from scratch with vanilla HTML, CSS, and JavaScript. Features scroll animations, a typewriter effect, loading screen, and Google-inspired polish.</p>
+            <div class="project-links">
+              <a href="https://github.com/k-karthik-pai/Portfolio" target="_blank" class="plink">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal">04 — Contact</div>
+      <div class="contact-inner reveal">
+        <h2 class="section-title contact-title">Let's build<br /><em>something together.</em></h2>
+        <p class="contact-sub">Whether it's a project collab, an opportunity, or just a hello — my inbox is always open.</p>
+        <a href="mailto:kasturikarthikpai@gmail.com?subject=Hey Karthik!" class="btn btn-primary btn-large">Say Hello →</a>
+        <p class="email-fallback">or copy: <span onclick="navigator.clipboard.writeText('kasturikarthikpai@gmail.com')" title="Click to copy">kasturikarthikpai@gmail.com</span></p>
+        <div class="social-links">
+          <a href="https://github.com/k-karthik-pai" target="_blank" class="social-link">GitHub</a>
+          <a href="https://linkedin.com/in/k-karthik-pai" target="_blank" class="social-link">LinkedIn</a>
+          <a href="mailto:kasturikarthikpai@gmail.com?subject=Hey Karthik!" class="social-link">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="footer-text">Designed & Built by <strong>K Karthik Pai</strong> · RVCE CSE '29</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
