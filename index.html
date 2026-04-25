@@ -258,15 +258,34 @@
   <section id="contact">
     <div class="container">
       <div class="section-label reveal">04 — Contact</div>
-      <div class="contact-inner reveal">
-        <h2 class="section-title contact-title">Let's build<br /><em>something together.</em></h2>
-        <p class="contact-sub">Whether it's a project collab, an opportunity, or just a hello — my inbox is always open.</p>
-        <a href="mailto:kasturikarthikpai@gmail.com?subject=Hey Karthik!" class="btn btn-primary btn-large">Say Hello →</a>
-        <p class="email-fallback">or copy: <span onclick="navigator.clipboard.writeText('kasturikarthikpai@gmail.com')" title="Click to copy">kasturikarthikpai@gmail.com</span></p>
-        <div class="social-links">
-          <a href="https://github.com/k-karthik-pai" target="_blank" class="social-link">GitHub</a>
-          <a href="https://linkedin.com/in/k-karthik-pai" target="_blank" class="social-link">LinkedIn</a>
-          <a href="mailto:kasturikarthikpai@gmail.com?subject=Hey Karthik!" class="social-link">Email</a>
+      <div class="contact-grid reveal">
+        <div class="contact-left">
+          <div class="contact-photo-wrap">
+            <img src="photo.jpeg" alt="K Karthik Pai" class="contact-photo" />
+          </div>
+          <h2 class="section-title contact-title">Let's build<br /><em>something together.</em></h2>
+          <p class="contact-sub">Whether it's a project collab, an opportunity, or just a hello — my inbox is always open.</p>
+          <div class="social-links">
+            <a href="https://github.com/k-karthik-pai" target="_blank" class="social-link">GitHub</a>
+            <a href="https://linkedin.com/in/k-karthik-pai" target="_blank" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-form-wrap">
+            <form id="contact-form" action="https://formspree.io/f/mqewnjbd" method="POST">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Your Message" class="form-input form-textarea" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large btn-full" id="submit-btn">Send Message →</button>
+              <p class="form-success" id="form-success">Thanks! I'll get back to you soon ✓</p>
+            </form>
+          </div>
         </div>
       </div>
     </div>

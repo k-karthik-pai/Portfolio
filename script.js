@@ -141,3 +141,34 @@ document.querySelectorAll('.btn-primary, .btn-ghost').forEach(function(btn) {
 
 
 console.log('%c KKP Portfolio ', 'background:#1a73e8;color:#fff;font-size:14px;font-weight:bold;padding:4px 12px;border-radius:4px;');
+
+
+// ── CONTACT FORM ──
+var contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var success = document.getElementById('form-success');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        contactForm.reset();
+        btn.textContent = 'Sent! ✓';
+        success.style.display = 'block';
+      } else {
+        btn.textContent = 'Error — try emailing directly';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      btn.textContent = 'Error — try emailing directly';
+      btn.disabled = false;
+    });
+  });
+}
