@@ -681,14 +681,12 @@ footer {
   left: 0;
   top: 0;
   white-space: nowrap;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  transform: translateY(10px);
+  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 #word-swap .word.active {
   opacity: 1;
   position: relative;
-  transform: translateY(0);
   pointer-events: auto;
 }
 
